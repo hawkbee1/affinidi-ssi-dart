@@ -4,20 +4,13 @@ import 'package:test/test.dart';
 
 class TestDidUrl extends DidUrl {
   TestDidUrl({
-    required String scheme,
-    required String method,
-    required String methodSpecificId,
-    String? path,
-    String? query,
-    String? fragment,
-  }) : super.internal(
-          scheme: scheme,
-          method: method,
-          methodSpecificId: methodSpecificId,
-          path: path,
-          query: query,
-          fragment: fragment,
-        );
+    required super.scheme,
+    required super.method,
+    required super.methodSpecificId,
+    super.path,
+    super.query,
+    super.fragment,
+  }) : super.internal();
 
   @override
   Future<DidDocument> resolveDid({DidResolutionOptions? options}) {

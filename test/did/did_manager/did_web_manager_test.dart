@@ -493,19 +493,19 @@ void main() {
         expect(vms[0]['id'], authResult.verificationMethodId);
         expect(vms[0]['controller'], 'did:web:example.com');
         expect(vms[0]['type'], 'Multikey');
-        expect((vms[0]['publicKeyMultibase'] as String), startsWith('z6Mk'));
+        expect(vms[0]['publicKeyMultibase'] as String, startsWith('z6Mk'));
 
         // VM 2: p256
         expect(vms[1]['id'], kaResult.verificationMethodId);
         expect(vms[1]['controller'], 'did:web:example.com');
         expect(vms[1]['type'], 'Multikey');
-        expect((vms[1]['publicKeyMultibase'] as String), startsWith('zDn'));
+        expect(vms[1]['publicKeyMultibase'] as String, startsWith('zDn'));
 
         // VM 3: secp256k1
         expect(vms[2]['id'], assertResult.verificationMethodId);
         expect(vms[2]['controller'], 'did:web:example.com');
         expect(vms[2]['type'], 'Multikey');
-        expect((vms[2]['publicKeyMultibase'] as String), startsWith('zQ3s'));
+        expect(vms[2]['publicKeyMultibase'] as String, startsWith('zQ3s'));
 
         // relationship arrays reference the correct VM IDs
         expect(json['authentication'], [authResult.verificationMethodId]);

@@ -121,8 +121,8 @@ class DataIntegrityMldsaRdfcGenerator extends EmbeddedProofSuiteCreateOptions
     super.challenge,
     super.domain,
     // Default to base64url-no-pad per W3C vc-di-quantum-resistant draft.
-    MultiBase proofValueMultiBase = MultiBase.base64UrlNoPad,
-  }) : super(proofValueMultiBase: proofValueMultiBase) {
+    super.proofValueMultiBase = MultiBase.base64UrlNoPad,
+  }){
     final expectedSchemes = cryptosuiteToScheme[_mldsaRdfcCryptosuite];
     if (expectedSchemes == null ||
         !expectedSchemes.contains(signer.signatureScheme)) {
@@ -260,8 +260,8 @@ class DataIntegrityMldsaJcsGenerator extends BaseJcsGenerator {
     super.challenge,
     super.domain,
     // Default to base64url-no-pad per W3C vc-di-quantum-resistant draft.
-    MultiBase proofValueMultiBase = MultiBase.base64UrlNoPad,
-  }) : super(proofValueMultiBase: proofValueMultiBase);
+    super.proofValueMultiBase = MultiBase.base64UrlNoPad,
+  });
 
   @override
   String get cryptosuite => _mldsaJcsCryptosuite;
