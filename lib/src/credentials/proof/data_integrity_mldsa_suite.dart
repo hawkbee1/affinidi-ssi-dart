@@ -3,8 +3,10 @@ import 'dart:typed_data';
 import 'package:json_ld_processor/json_ld_processor.dart';
 import 'package:pqcrypto/pqcrypto.dart';
 
+import '../../../ssi.dart' show DidVerifier;
 import '../../did/did_resolver.dart';
 import '../../did/did_signer.dart';
+import '../../did/did_verifier.dart' show DidVerifier;
 import '../../did/public_key_utils.dart';
 import '../../did/universal_did_resolver.dart';
 import '../../exceptions/ssi_exception.dart';
